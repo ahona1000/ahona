@@ -1,0 +1,11 @@
+\frametitle{Previewing a \texttt {GeoSeries}}
+\phantomsection\label{previewing-a-geoseries}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data.plot()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{spatial_2_files/figure-beamer/cell-6-output-1.pdf}
+
+Discussion question: Why isn't it enough to just to \texttt{head()}?

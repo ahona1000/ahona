@@ -451,11 +451,29 @@ Discussion Question: What can we do to improve this map?
 
 Steps
 
+<<<<<<< Updated upstream
 1. From the `dissolved` `GeoDataFrame`, get a single polygon for the dense areas
     - Hint: you can use standard `pandas` commands to subset 
 2. Create a new geometry object called `geo`, which is the dense areas with a 500m buffer around them
 3. Plot your new geometry object `geo.plot()` 
 <!-- 
+=======
+1. From the `dissolved` `GeoDataFrame`, get the polygon for the dense areas
+2. Create a new geometry object called `geo`, which is the dense areas with a 500m buffer
+3. `geo.plot()` 
+
+
+```{python}
+
+dense_poly = dissolved.loc[dissolved["dense"] == 1]
+
+geo = dense_poly.geometry.buffer(500)
+
+geo.plot()
+
+```
+
+>>>>>>> Stashed changes
 After you are done, here are some cosmetic suggestions:
 
 * Start with a grey plot of all of the Austin boundaries: `austin = data.plot(color="grey")`
