@@ -884,6 +884,19 @@ app_ui = ui.page_navbar(
     ui.nav_panel("Page 2", "This is the second 'page'."),
     title="Shiny navigation components",
 )
+
+page2 = ui.layout_columns(
+    ui.card(
+        "Penguins, sorted by body mass",
+        ui.output_data_frame("largest penguins") 
+
+    )
+) 
+
+@render.data_frame 
+def largest penguins(): 
+    return df[["species", "island", "body_mass_g"]].sort_values(by=['body_mass_g']) 
+
 ```
 
 :::
